@@ -16,8 +16,8 @@ class MyElement extends PolymerElement {
     return html`
       <style> .xp { color: blue; } </style>
       <span class="title">This is the Zen Progress Component.</br></span>
-      
-      <span class="xp" on-click="click">Click for XP: [[xp]]</span>
+      <span class="tooltip">Click for XP:</span><br />
+      <span class="xp" on-click="click">[[xp]]</span>
     `;
   }
 
