@@ -2,19 +2,30 @@ import {PolymerElement, html} from '@polymer/polymer';
 
 class MyElement extends PolymerElement {
 
-  static get properties() { return { time: Number } }
+  static get properties() { 
+    return {
+      xp: {
+        notify: true,
+        type: Number,
+        value: 0
+      }
+    }
+  }
 
   static get template() {
     return html`
-      <style> .time { color: green; } </style>
-
-      Current Time: <span class="time">[[time]]</span>!
+      <style> .xp { color: blue; } </style>
+      
+      <span class="xp" on-click="click">Click for XP: [[xp]]</span>
     `;
   }
 
   ready() {
     super.ready();
-    this.time=1000;
+  }
+
+  click() {
+    this.xp=this.xp+100;
   }
 }
 
