@@ -2,19 +2,19 @@ import {PolymerElement, html} from '@polymer/polymer';
 
 class MyElement extends PolymerElement {
 
-  static get properties() { return { mood: Number } }
+  static get properties() { return { time: Number } }
 
   static get template() {
     return html`
-      <style> .mood { color: green; } </style>
+      <style> .time { color: green; } </style>
 
-      Web Components are <span class="mood">[[mood]]</span>!
+      Current Time: <span class="time">[[time]]</span>!
     `;
   }
 
   ready() {
     super.ready();
-    this.mood="Great!";
+    this.time=1000;
   }
 }
 
