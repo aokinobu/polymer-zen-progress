@@ -1,6 +1,6 @@
 import {PolymerElement, html} from '@polymer/polymer';
 
-class MyElement extends PolymerElement {
+class ZenProgressElement extends PolymerElement {
 
   static get properties() { 
     return {
@@ -30,4 +30,4 @@ class MyElement extends PolymerElement {
   }
 }
 
-customElements.define('zen-progress', MyElement);
+customElements.define('zen-progress', ZenProgressElement);
